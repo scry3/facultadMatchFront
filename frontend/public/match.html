@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Matches - Mini App</title>
+  <link rel="stylesheet" href="estilosMatch.css" />
+</head>
+<body>
+
+  <main>
+    <header class="container header">
+      <h2 class="titulo">Tus matches</h2>
+      <p class="subtitulo">Si hay match, podés ver el @Instagram del otro.</p>
+    </header>
+
+    <section class="container matches" id="matchesSection" aria-live="polite">
+      <ul id="matchesList" class="matches-list">
+        <!-- Aquí se listan los matches -->
+      </ul>
+
+      <p id="noMatches" class="muted" style="display:none;">No tenés matches todavía.</p>
+    </section>
+
+    <footer class="container footer">
+      <a href="explorar.html" class="link">Volver a explorar</a> |
+      <a href="index.html" class="link">Inicio</a>
+    </footer>
+  </main>
+
+  <script src="main.js"></script>
+</body>
+</html>

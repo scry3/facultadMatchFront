@@ -1,0 +1,213 @@
+/* ===========================================
+   VARIABLES DE COLOR
+   =========================================== */
+
+:root {
+    --color-fondo: #F9F8F6;       /* Fondo general blanco cálido */
+    --color-primario: #FF6B6B;    /* Botones y acentos principales */
+    --color-secundario: #FFA07A;  /* Hover, subtítulos y detalles */
+    --color-texto: #333333;       /* Texto principal */
+    --color-blanco: #ffffff;      /* Blanco puro para tarjetas y contenedores */
+}
+
+/* ===========================================
+   RESETEO BÁSICO
+   =========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Evita problemas de tamaños */
+    font-family: Arial, sans-serif;
+}
+
+/* ===========================================
+   ESTILO GENERAL
+   =========================================== */
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    display: flex;
+    justify-content: center;  /* Centra horizontal */
+    align-items: center;      /* Centra vertical */
+    height: 100vh;
+}
+
+/* Header de matches más compacto */
+.header {
+  padding: 1rem 1rem 0.5rem 1rem; /* arriba 1rem, abajo 0.5rem */
+}
+
+.header .titulo {
+  font-size: 1.5rem;  /* un poquito más pequeño que en explorar */
+  margin-bottom: 0.3rem;
+}
+
+.header .subtitulo {
+  font-size: 0.9rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-secundario);
+}
+
+main {
+  padding: 1rem 1rem 1rem 1rem; /* 1rem arriba, derecha, abajo, izquierda */
+  box-sizing: border-box;        /* asegurar que el padding no rompa el layout */
+}
+
+
+
+/* ===========================================
+   CONTENEDOR PRINCIPAL
+   =========================================== */
+
+.container {
+    background: var(--color-blanco);
+    padding: 2rem;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px; /* Esquinas redondeadas */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* Sombra leve */
+    text-align: center;
+}
+
+/* ===========================================
+   TITULOS
+   =========================================== */
+
+.titulo {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitulo {
+    font-size: 1rem;
+    color: var(--color-secundario);
+    margin-bottom: 2rem;
+}
+
+/* ===========================================
+   BOTONES
+   =========================================== */
+
+.btn {
+    display: block;
+    text-decoration: none;
+    color: var(--color-blanco);
+    background-color: var(--color-primario);
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    transition: 0.2s;
+}
+
+.btn:hover {
+    opacity: 0.9; /* Efecto hover simple */
+}
+
+.btn-secundario {
+    background-color: var(--color-secundario);
+}
+
+
+
+
+
+
+
+/* ===========================================
+   FORMULARIOS
+   =========================================== */
+
+.label {
+    text-align: left;
+    display: block;
+    margin: 1rem 0 0.3rem;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+.input {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #ccc; /* Borde sutil */
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.input:focus {
+    border-color: var(--color-primario); /* Marca el foco */
+}
+
+.texto-info {
+    margin-top: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.link {
+    color: var(--color-primario);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.link:hover {
+    text-decoration: underline;
+}
+
+
+
+
+
+
+/* ===========================================
+   TEXTAREA
+   =========================================== */
+
+.textarea {
+    resize: none; /* Para evitar que rompa el diseño */
+}
+
+
+
+
+
+/* ===========================================
+   TARJETAS & LAYOUT EXPLORAR / MATCHES
+   =========================================== */
+
+/* Contenedor de tarjeta */
+.card {
+  background: var(--color-blanco);
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+/* Cuerpo de la tarjeta */
+.card-body {
+  padding: 1rem;
+}
+
+.perfil-card { 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 160px;
+}
+
+/* Meta (edad - carrera) más sutil */
+.muted {
+  color: var(--color-secundario);
+  font-size: 0.9rem;
+}
+
+
+/* Acciones (botones) dentro de la tarjeta */
+.card-actions {
+  display: flex;
+  justify-content: center; /* Centra los botones horizontalmente */
+  gap: 1rem;               /* Espacio entre botones */
+  padding: 0.8rem;
+}

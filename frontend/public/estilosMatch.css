@@ -1,0 +1,142 @@
+/* ===========================================
+   VARIABLES DE COLOR
+   =========================================== */
+
+:root {
+    --color-fondo: #F9F8F6;       /* Fondo general blanco cálido */
+    --color-primario: #FF6B6B;    /* Botones y acentos principales */
+    --color-secundario: #FFA07A;  /* Hover, subtítulos y detalles */
+    --color-texto: #333333;       /* Texto principal */
+    --color-blanco: #ffffff;      /* Blanco puro para tarjetas y contenedores */
+}
+
+
+/* ===========================================
+   BODY Y LAYOUT PRINCIPAL MATCHES
+   =========================================== */
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    display: flex;
+    justify-content: center; /* centra horizontalmente todo el contenido */
+    align-items: flex-start; /* arriba, no centrado vertical */
+    padding: 2rem;
+    min-height: 100vh;
+    font-family: Arial, sans-serif;
+}
+
+/* Wrapper opcional para controlar ancho máximo */
+main {
+    width: 100%;
+    max-width: 400px; /* mismo tamaño que container general */
+}
+
+/* ===========================================
+   HEADER MATCHES
+   =========================================== */
+.header {
+    padding: 1rem 1rem 1rem 1rem;
+    text-align: center; /* centra todo el contenido del header */
+    background-color: var(--color-primario);
+    color: var(--color-blanco);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.header .titulo {
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+}
+
+.header .subtitulo {
+    font-size: 1rem;
+    color: var(--color-blanco); /* texto blanco sobre fondo primario */
+    margin-bottom: 0;
+}
+
+/* ===========================================
+   LINKS
+   =========================================== */
+.link {
+    color: var(--color-primario);
+    text-decoration: none; /* sacamos decoración */
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.link:hover {
+    text-decoration: none; /* mantener sin subrayado */
+    opacity: 0.8; /* efecto hover simple */
+}
+
+/* ===========================================
+   CONTENEDORES MATCHES
+   =========================================== */
+.matches {
+    max-height: 70vh;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+    margin-top: 1rem;
+}
+
+/* Lista de matches */
+.matches-list {
+    list-style: none;
+    padding: 0;
+}
+
+/* Cada li como tarjeta */
+.matches-list li {
+    margin-bottom: 1rem;
+}
+
+/* Tarjeta individual */
+.card {
+    background: var(--color-blanco);
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    overflow: hidden;
+    border-left: 5px solid var(--color-primario); /* acento de color */
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* Cuerpo de la tarjeta */
+.card-body {
+    padding: 1rem;
+}
+
+.perfil-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 160px;
+}
+
+.muted {
+    color: var(--color-secundario);
+    font-size: 0.9rem;
+}
+
+/* Acciones (botones) dentro de la tarjeta */
+.card-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.8rem;
+}
+
+/* Responsive: pantallas chicas */
+@media (max-width: 500px) {
+    body {
+        padding: 1rem;
+    }
+
+    main {
+        max-width: 100%;
+    }
+}

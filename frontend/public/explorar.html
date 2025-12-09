@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Explorar - Mini App</title>
+    <link rel="stylesheet" href="estilosExplorar.css" />
+  </head>
+
+  <body>
+    <!-- WRAPPER PARA CENTRAR EXPLORER + EDITAR PERFIL -->
+    <div class="layout-columns">
+      <main>
+        <header class="container header">
+          <h2 class="titulo">Explorar perfiles</h2>
+          <p class="subtitulo">
+            Dale like si te copa. Si hay match, se muestra el @IG.
+          </p>
+        </header>
+
+        <section
+          class="container explorar"
+          id="explorarSection"
+          aria-live="polite"
+        >
+          <!-- Acá se renderiza la tarjeta del perfil -->
+          <div id="perfilCard" class="card perfil-card">
+            <div class="card-body">
+              <h3 id="perfilNombre">Cargando...</h3>
+              <p id="perfilMeta" class="muted"></p>
+              <p id="perfilDescripcion"></p>
+            </div>
+
+            <div class="card-actions">
+              <button id="skipBtn" class="btn btn-secundario">Skip</button>
+              <button id="likeBtn" class="btn">Like</button>
+            </div>
+          </div>
+
+          <p id="noMore" class="muted" style="display: none">
+            No hay más perfiles por ahora.
+          </p>
+        </section>
+
+        <footer class="container footer">
+          <a href="match.html" class="link">Ver mis matches</a> |
+          <a href="index.html" class="link">Inicio</a>
+        </footer>
+      </main>
+
+      <div id="editarPerfil">
+        <label>Descripción:</label>
+        <textarea id="inputDescripcion"></textarea>
+
+        <label>Instagram:</label>
+        <input type="text" id="inputInstagram">
+
+        <div>
+          <strong>Vista previa:</strong>
+          <p id="previewDescripcion"></p>
+        </div>
+
+        <button id="btnActualizarPerfil">Actualizar</button>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

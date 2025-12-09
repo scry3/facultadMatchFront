@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini App - Registro</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="titulo">Crear cuenta</h2>
+      <p class="subtitulo">Completá tu información</p>
+
+      <!-- Formulario de registro -->
+      <form id="registerForm">
+        <label for="username" class="label">Usuario</label>
+        <input id="username" type="text" class="input" required />
+
+        <label for="password" class="label">Contraseña</label>
+        <input id="password" type="password" class="input" required />
+
+        <label for="nombre" class="label">Nombre (puede ser ficticio)</label>
+        <input id="nombre" type="text" class="input" required />
+
+        <label for="edad" class="label">Edad</label>
+        <input
+          id="edad"
+          type="number"
+          class="input"
+          min="18"
+          max="100"
+          required
+        />
+
+        <label for="carrera" class="label">Carrera</label>
+        <input id="carrera" type="text" class="input" required />
+
+        <label for="descripcion" class="label">Descripción</label>
+        <textarea
+          id="descripcion"
+          class="input textarea"
+          rows="4"
+          maxlength="200"
+          required
+        ></textarea>
+
+        <label for="instagram" class="label"
+          >Instagram (se muestra solo con match)</label
+        >
+        <input
+          id="instagram"
+          type="text"
+          class="input"
+          placeholder="@usuario"
+          required
+        />
+
+        <button type="submit" class="btn">Registrarme</button>
+      </form>
+
+      <p class="texto-info">
+        ¿Ya tenés cuenta? <a href="login.html" class="link">Iniciar sesión</a>
+      </p>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

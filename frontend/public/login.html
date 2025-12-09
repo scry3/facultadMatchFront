@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mini App - Login</title>
+    <link rel="stylesheet" href="estilos.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h2 class="titulo">Iniciar sesión</h2>
+      <p class="subtitulo">Ingresá con tu usuario</p>
+
+      <!-- Formulario de login -->
+      <form id="loginForm">
+        <!--for hace que al tocar la palabra te mande al campo -->
+        <label for="username" class="label">Usuario</label>
+        <input type="text" id="username" class="input" required />
+
+        <label for="password" class="label">Contraseña</label>
+        <input type="password" id="password" class="input" required />
+
+        <button type="submit" class="btn">Entrar</button>
+      </form>
+
+      <p class="texto-info">
+        ¿No tenés cuenta?
+        <a href="register.html" class="link">Registrate acá</a>
+      </p>
+    </div>
+
+    <!-- JS del front -->
+    <script src="main.js"></script>
+  </body>
+</html>

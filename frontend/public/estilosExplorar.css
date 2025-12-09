@@ -1,0 +1,239 @@
+/* ===========================================
+   VARIABLES DE COLOR
+   =========================================== */
+:root {
+    --color-fondo: #F9F8F6;
+    --color-primario: #FF6B6B;
+    --color-secundario: #FFA07A;
+    --color-texto: #333333;
+    --color-blanco: #ffffff;
+}
+
+/* ===========================================
+   RESETEO BÁSICO
+   =========================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ===========================================
+   BODY Y LAYOUT PRINCIPAL
+   =========================================== */
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    display: flex;
+    justify-content: center; 
+    align-items: flex-start;
+    padding: 2rem;
+    min-height: 100vh;
+}
+
+/* Layout de dos columnas */
+.layout-columns {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+    width: 100%;
+    max-width: 900px;
+}
+
+/* ===========================================
+   HEADER EXPLORAR
+   =========================================== */
+header.container.header {
+    padding: 1rem;
+    text-align: center;
+    background-color: var(--color-primario); /* rojo fuerte */
+    color: var(--color-blanco);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+header.container.header .titulo {
+    font-size: 2rem;
+    margin-bottom: 0.3rem;
+    color: var(--color-blanco);
+}
+
+header.container.header .subtitulo {
+    font-size: 1rem;
+    color: var(--color-blanco);
+    margin-bottom: 0;
+}
+
+/* ===========================================
+   LINKS
+   =========================================== */
+.link {
+    color: var(--color-primario);
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+.link:hover {
+    text-decoration: none;
+    opacity: 0.8;
+}
+
+/* ===========================================
+   CONTAINER GENERAL
+   =========================================== */
+.container {
+    background: var(--color-blanco);
+    padding: 2rem;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+/* ===========================================
+   BOTONES
+   =========================================== */
+.btn {
+    display: block;
+    text-decoration: none;
+    color: var(--color-blanco);
+    background-color: var(--color-primario);
+    padding: 0.8rem;
+    margin-bottom: 1rem;
+    border-radius: 6px;
+    transition: 0.2s;
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.btn-secundario {
+    background-color: var(--color-secundario);
+}
+
+/* ===========================================
+   FORMULARIOS
+   =========================================== */
+label {
+    text-align: left;
+    display: block;
+    margin: 1rem 0 0.3rem;
+    font-weight: bold;
+    font-size: 0.9rem;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+}
+
+input:focus, textarea:focus {
+    border-color: var(--color-primario);
+}
+
+textarea {
+    resize: none;
+}
+
+/* ===========================================
+   TARJETAS EXPLORAR
+   =========================================== */
+.card {
+    background: var(--color-blanco);
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+    overflow: hidden;
+    margin-bottom: 1rem;
+    border-left: 5px solid var(--color-primario);
+    transition: 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.card-body {
+    padding: 1rem;
+}
+
+.perfil-card { 
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 160px;
+}
+
+.muted {
+    color: var(--color-secundario);
+    font-size: 0.9rem;
+}
+
+.card-actions {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0.8rem;
+}
+
+/* ===========================================
+   EDICIÓN DE PERFIL
+   =========================================== */
+#editarPerfil {
+    flex: 1;
+    max-width: 400px;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 400px;
+    background: var(--color-blanco);
+    border-radius: 8px;
+}
+
+#inputDescripcion {
+    height: 50%;
+    width: 100%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+}
+
+#previewDescripcion {
+    height: auto;
+    max-height: 40%;
+    overflow-y: auto;
+}
+
+/* ===========================================
+   RESPONSIVE
+   =========================================== */
+@media (max-width: 900px) {
+    body {
+        flex-direction: column;
+        align-items: center;
+        padding: 1rem;
+    }
+
+    main, #editarPerfil {
+        flex: unset;
+        width: 100%;
+        max-width: 400px;
+        margin-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    #editarPerfil {
+        height: auto;
+    }
+}
