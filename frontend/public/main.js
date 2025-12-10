@@ -4,7 +4,7 @@
    ============================================================ */
 
 /* URL base del backend: cuando lo subas a internet, cambiás esto */
-const API_BASE = 'http://127.0.0.1:3000';
+const API_BASE = 'http://chooseWisely.onrender.com';
 
 
 /* Extraemos del path el nombre del archivo HTML actual.
@@ -391,3 +391,4 @@ async function inicializarPerfil() {
 
 // Llamar a la función al cargar la sección de edición
 inicializarPerfil();
+
